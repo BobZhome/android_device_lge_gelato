@@ -12,6 +12,6 @@
     <int name="recipientLimit">40</int>
     <int name="smsToMmsTextThreshold">4</int>
     <string name="uaProfTagName">Profile</string>
-    <string name="userAgent">LGE-VM701/Android-mms\u0020</string>
-    <string name="uaProfUrl">http://uaprof.vmobl.com/lg/vm701/1.0/VMU_VM701_UAProf.xml</string>
+    <string name="userAgent">LGE-VM670/Android-mms\u0020</string>
+    <string name="uaProfUrl">http://uaprof.vmobl.com/lg/vm670/1.0/VMU_VM670_UAProf.xml</string>
 </mms_config>

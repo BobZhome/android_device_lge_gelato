@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <mms_config version="4">
     <bool name="enabledMMS">true</bool>
-    <int name="maxMessageSize">524288</int>
+    <int name="maxMessageSize">1048576</int>
     <int name="maxImageHeight">960</int>
     <int name="maxImageWidth">1280</int>
     <int name="defaultSMSMessagesPerThread">200</int>
@@ -12,6 +12,6 @@
     <int name="recipientLimit">40</int>
     <int name="smsToMmsTextThreshold">4</int>
     <string name="uaProfTagName">Profile</string>
-    <string name="userAgent">LGE-VM701/Android-mms\u0020</string>
-    <string name="uaProfUrl">http://uaprof.vmobl.com/lg/vm701/1.0/VMU_VM701_UAProf.xml</string>
+    <string name="userAgent">Sprint-LS700 Mozilla/5.0 (Linux; U; Android 2.2; en-us; LS700 Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</string>
+    <string name="uaProfUrl">http://device.sprintpcs.com/LG/LS670/LS700ZVD.rdf</string>
 </mms_config>

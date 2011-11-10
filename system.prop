@@ -1,5 +1,5 @@
 #
-# system.prop for thunderc
+# system.prop for gelato
 #
 
 persist.mvpdm.ProxyServerAddr=68.28.31.1

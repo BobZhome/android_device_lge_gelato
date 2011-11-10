@@ -242,7 +242,7 @@ static const camera_size_type *picture_sizes_ptr;
 static unsigned int supportedPictureSizesCount;
 
 static const target_map targetList [] = {
-    { "thunderc", TARGET_MSM7627 },
+    { "gelato",   TARGET_MSM7627 },
     { "thunderg", TARGET_MSM7627 },
     { "msm7625",  TARGET_MSM7625 },
     { "msm7627",  TARGET_MSM7627 },
