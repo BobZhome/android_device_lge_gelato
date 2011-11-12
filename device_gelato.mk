@@ -10,7 +10,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
 PRODUCT_PACKAGES += \
-    gps.gelato \
+    gps.default \
     librs_jni \
     libmm-omxcore \
     libOmxCore \
@@ -35,11 +35,11 @@ PRODUCT_COPY_FILES += \
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
-    vendor/lge/gelato/proprietary/$(SUB_MODEL)/system/usr/keylayout/7k_handset.kl:system/usr/keylayout/7k_handset.kl \
-    vendor/lge/gelato/proprietary/$(SUB_MODEL)/system/usr/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
-    vendor/lge/gelato/proprietary/$(SUB_MODEL)/system/usr/keylayout/Broadcom_Bluetooth_HID.kl:system/usr/keylayout/Broadcom_Bluetooth_HID.kl \
-    vendor/lge/gelato/proprietary/$(SUB_MODEL)/system/usr/keylayout/gelato_keypad.kl:system/usr/keylayout/gelato_keypad.kl \
-    vendor/lge/gelato/proprietary/$(SUB_MODEL)/system/usr/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
+    device/lge/gelato/files/usr/keylayout/7k_handset.kl:system/usr/keylayout/7k_handset.kl \
+    device/lge/gelato/files/usr/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
+    device/lge/gelato/files/usr/keylayout/Broadcom_Bluetooth_HID.kl:system/usr/keylayout/Broadcom_Bluetooth_HID.kl \
+    device/lge/gelato/files/usr/keylayout/gelato_keypad.kl:system/usr/keylayout/gelato_keypad.kl \
+    device/lge/gelato/files/usr/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
     vendor/lge/gelato/proprietary/$(SUB_MODEL)/system/usr/keychars/gelato_keypad.kcm.bin:system/usr/keychars/gelato_keypad.kcm.bin \
 
 # Board-specific init (does not support charging in "power off" state yet)
@@ -79,13 +79,14 @@ PRODUCT_COPY_FILES += \
 
 # GPS
 PRODUCT_COPY_FILES += \
-    vendor/lge/gelato/proprietary/$(SUB_MODEL)/system/etc/loc_parameter.ini:system/etc/loc_parameter.ini \
+    device/lge/gelato/files/etc/loc_parameter.ini:system/etc/loc_parameter.ini \
     vendor/lge/gelato/proprietary/$(SUB_MODEL)/system/lib/libloc_api-rpc-qc.so:system/lib/libloc_api-rpc-qc.so \
     vendor/lge/gelato/proprietary/$(SUB_MODEL)/system/lib/libgps.so:system/lib/libgps.so \
     vendor/lge/gelato/proprietary/$(SUB_MODEL)/system/lib/libloc_ext.so:system/lib/libloc_ext.so \
     vendor/lge/gelato/proprietary/$(SUB_MODEL)/system/lib/libloc_ext.so:obj/lib/libloc_ext.so \
     vendor/lge/gelato/proprietary/$(SUB_MODEL)/system/lib/libcommondefs.so:system/lib/libcommondefs.so \
-    vendor/lge/gelato/proprietary/$(SUB_MODEL)/system/lib/libloc-rpc.so:system/lib/libloc-rpc.so
+    vendor/lge/gelato/proprietary/$(SUB_MODEL)/system/lib/libloc-rpc.so:system/lib/libloc-rpc.so \
+#    vendor/lge/gelato/proprietary/$(SUB_MODEL)/system/lib/hw/gps.default.so:system/lib/hw/gps.default.so \
 
 # 3D
 PRODUCT_COPY_FILES += \
@@ -108,8 +109,8 @@ PRODUCT_COPY_FILES += \
     device/lge/gelato/files/kernel/$(SUB_MODEL)/libra.ko:system/lib/modules/libra.ko \
     device/lge/gelato/files/kernel/$(SUB_MODEL)/librasdioif.ko:system/lib/modules/librasdioif.ko \
     device/lge/gelato/files/kernel/$(SUB_MODEL)/wireless.ko:system/lib/modules/wireless.ko \
-    vendor/lge/gelato/proprietary/$(SUB_MODEL)/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-    vendor/lge/gelato/proprietary/$(SUB_MODEL)/etc/dhcpcd/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
+    device/lge/gelato/files/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+    device/lge/gelato/files/etc/dhcpcd/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
     vendor/lge/gelato/proprietary/$(SUB_MODEL)/system/etc/wl/nvram.txt:system/etc/wl/nvram.txt \
     vendor/lge/gelato/proprietary/$(SUB_MODEL)/system/etc/wl/rtecdc.bin:system/etc/wl/rtecdc.bin \
     vendor/lge/gelato/proprietary/$(SUB_MODEL)/system/etc/wl/rtecdc-apsta.bin:system/etc/wl/rtecdc-apsta.bin \
@@ -121,7 +122,7 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    vendor/lge/gelato/proprietary/$(SUB_MODEL)/etc/AudioFilter.csv:system/etc/AudioFilter.csv \
+    device/lge/gelato/files/etc/AudioFilter.csv:system/etc/AudioFilter.csv \
     vendor/lge/gelato/proprietary/$(SUB_MODEL)/system/lib/libaudioeq.so:system/lib/libaudioeq.so \
     device/lge/gelato/files/etc/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt \
 
@@ -210,7 +211,7 @@ PRODUCT_COPY_FILES += \
     device/lge/gelato/files/apps/LauncherPro.apk:system/app/LauncherPro.apk \
 
 # Let's use our own GPS config file
-PRODUCT_COPY_FILES += vendor/lge/gelato/proprietary/$(SUB_MODEL)/etc/gps.conf:system/etc/gps.conf
+PRODUCT_COPY_FILES += device/lge/gelato/files/etc/gps.conf:system/etc/gps.conf
 
 $(call inherit-product, build/target/product/small_base.mk)
 

@@ -24,9 +24,11 @@ BOARD_USES_QCOM_LIBS := true
 BOARD_USES_QCOM_LIBRPC := true
 
 # GPS
-BOARD_USES_GPSSHIM := true
-BOARD_GPS_NEEDS_XTRA := true
-BOARD_GPS_LIBRARIES := libgps
+# BOARD_USES_GPSSHIM := true
+# BOARD_GPS_NEEDS_XTRA := true
+# BOARD_GPS_LIBRARIES := libgps
+# BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := gelato
+# BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 6225
 
 # Browser
 JS_ENGINE := v8
@@ -70,7 +72,7 @@ WPA_SUPPLICANT_VERSION := VER_0_6_X
 
 # Kernel
 BOARD_KERNEL_BASE := 0x12200000
-BOARD_KERNEL_CMDLINE := mem=477M console=ttyMSM2,115200n8 androidboot.hardware=thunderc
+BOARD_KERNEL_CMDLINE := mem=477M console=ttyMSM2,115200n8 androidboot.hardware=gelato
 BOARD_PAGE_SIZE := 0x00000800
 
 # Appropriate defaults?
@@ -106,7 +108,7 @@ WITH_DEXPREOPT := false
 WITH_JIT := true
 ENABLE_JSC_JIT := true
 
-#TARGET_PROVIDES_LIBRIL = vendor/lge/thunderc/proprietary/system/lib/libril-qc-1.so
+#TARGET_PROVIDES_LIBRIL = vendor/lge/gelato/proprietary/system/lib/libril-qc-1.so
 
 # FM Radio
 #BOARD_HAVE_FM_RADIO := false
