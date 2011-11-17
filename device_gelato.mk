@@ -106,7 +106,6 @@ PRODUCT_COPY_FILES += \
 
 # WiFi
 PRODUCT_COPY_FILES += \
-    device/lge/gelato/files/kernel/$(SUB_MODEL)/libra.ko:system/lib/modules/libra.ko \
     device/lge/gelato/files/kernel/$(SUB_MODEL)/librasdioif.ko:system/lib/modules/librasdioif.ko \
     device/lge/gelato/files/kernel/$(SUB_MODEL)/wireless.ko:system/lib/modules/wireless.ko \
     device/lge/gelato/files/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \

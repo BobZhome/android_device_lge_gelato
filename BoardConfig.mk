@@ -1,3 +1,9 @@
+# inherit from the proprietary version
+-include vendor/lge/gelato/BoardConfigVendor.mk
+
+# Camera
+USE_CAMERA_STUB := true
+
 # CPU
 TARGET_BOARD_PLATFORM := msm7k
 TARGET_ARCH_VARIANT := armv7-a
@@ -71,9 +77,9 @@ WIFI_DRIVER_HAS_LGE_SOFTAP := true
 WPA_SUPPLICANT_VERSION := VER_0_6_X
 
 # Kernel
-BOARD_KERNEL_BASE := 0x12200000
 BOARD_KERNEL_CMDLINE := mem=477M console=ttyMSM2,115200n8 androidboot.hardware=gelato
-BOARD_PAGE_SIZE := 0x00000800
+BOARD_KERNEL_BASE := 0x12200000
+BOARD_KERNEL_PAGESIZE := 2048
 
 # Appropriate defaults?
 BOARD_FLASH_BLOCK_SIZE := 131072
@@ -103,6 +109,8 @@ ifeq ($(SUB_MODEL),VS700)
 endif
 
 #BOARD_HAS_NO_SELECT_BUTTON := true
+# Use this flag if the board has a ext4 partition larger than 2gb
+#BOARD_HAS_LARGE_FILESYSTEM := true
 
 WITH_DEXPREOPT := false
 WITH_JIT := true
